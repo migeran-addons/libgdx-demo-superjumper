@@ -21,12 +21,17 @@ buildscript {
     }
 
     repositories {
+        maven {
+            url('https://dl.migeran.com/maven/')
+        }
         jcenter()
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 
     dependencies {
+        // Migeran plugin
+        classpath 'com.migeran:migeran.build.gradle:0.90.+'
         classpath "de.richsource.gradle.plugins:gwt-gradle-plugin:$gwtGradleVersion"
         classpath "com.android.tools.build:gradle:$androidGradleToolsVersion"
         classpath "org.robovm:robovm-gradle-plugin:$roboVMGradleVersion"
@@ -40,9 +45,14 @@ allprojects {
     version = "1.0"
     ext {
         appName = "Super Jumper"
+        gdxVersion = "1.5.1-SNAPSHOT"
+        roboVMVersion = "0.0.11"
     }
     
     repositories {
+        maven {
+            url('https://dl.migeran.com/maven/')
+        }
         mavenLocal();
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }

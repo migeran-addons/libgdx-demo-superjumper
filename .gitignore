@@ -44,6 +44,8 @@ local.properties
 .loadpath
 .externalToolBuilders/
 *.launch
+.project
+.classpath
 
 ## NetBeans
 nbproject/private/
@@ -58,3 +60,12 @@ nb-configuration.xml
 
 .gradle
 build/
+
+# Native files
+native/
+
+## Migeran
+build-xcode/
+xcuserdata/
+project.xcworkspace/
+*.xccheckout
